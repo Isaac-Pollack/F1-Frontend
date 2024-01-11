@@ -1,0 +1,240 @@
+/* MAIN APP */
+.App {
+  text-align: center;
+  scroll-behavior: smooth;
+}
+
+.App-logo {
+  height: 30px;
+  pointer-events: none;
+  animation: App-logo-spin infinite 12s linear;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.App-header {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  background-image: url('./images/f1.gif');
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.9; /* Adjust the opacity as needed */
+}
+
+
+.App-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #282c34;
+  z-index: 999;
+}
+
+.App-nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+.App-nav li {
+  margin: 0;
+}
+
+.App-nav li:last-child {
+  margin-left: auto;
+}
+
+.App-nav a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  padding: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.App-nav a:hover {
+  background-color: #5bc4f0;
+}
+
+.App-login-btn {
+  background-color: transparent;
+  border: none;
+  color: white;
+  padding: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: inherit;
+  font-family: inherit;
+}
+
+.App-login-btn:hover {
+  background-color: #5bc4f0;
+  color: black;
+}
+
+
+.App-section {
+  padding: 2rem;
+  scroll-snap-align: start;
+}
+
+.App-box {
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  padding: 2rem;
+}
+
+.App-footer {
+  background-color: #282c34;
+  color: white;
+  padding: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.App-footer-section {
+  flex: 1 1 33.33%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.App-scroll-top-btn {
+  padding: 0.5rem 1rem;
+  background-color: #61dafb;
+  border: none;
+  color: #000;
+  cursor: pointer;
+}
+
+.App-scroll-top-btn:hover {
+  background-color: #5bc4f0;
+}
+
+/* Component Specific */
+
+/* Standings component */
+.Standings {
+  margin: 2rem;
+}
+
+.Standings-buttons {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.Standings-button {
+  background-color: transparent;
+  border: none;
+  color: white;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: inherit;
+  font-family: inherit;
+}
+
+.Standings-button:focus {
+  outline: none;
+}
+
+.Standings-button:not(:last-child) {
+  margin-right: 1rem;
+}
+
+.Standings-button.active {
+  background-color: #5bc4f0;
+  color: black;
+}
+
+.Standings-button:not(.active) {
+  background-color: #282c34;
+  color: white;
+}
+
+.Standings-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 2rem;
+}
+
+.Standings-table th,
+.Standings-table td {
+  padding: 0.5rem;
+  text-align: center;
+}
+
+.Standings-table th {
+  background-color: #282c34;
+  color: white;
+}
+
+.Standings-table tbody tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.Standings-table tbody tr:hover {
+  background-color: #d6d6d6;
+}
+
+/* Car animation */
+.loading-dots {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin: 0 5px;
+  background-color: #333;
+  border-radius: 50%;
+  animation: dot-pulse 1s infinite;
+}
+
+.dot:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.dot:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes dot-pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.noHover{
+    pointer-events: none;
+}

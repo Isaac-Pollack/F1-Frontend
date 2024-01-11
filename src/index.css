@@ -1,0 +1,35 @@
+@font-face {
+  font-family: 'Formula1 Black';
+  src: url('./fonts/Formula1-Black.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Formula1 Bold';
+  src: url('./fonts/Formula1-Bold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Formula1 Regular';
+  src: url('./fonts/Formula1-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Formula1 Wide';
+  src: url('./fonts/Formula1-Wide.ttf') format('truetype');
+}
+
+body {
+  margin: 0;
+  font-family: 'Formula1 Regular', Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Formula1 Bold', Arial, sans-serif;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
